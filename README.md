@@ -1,6 +1,6 @@
 # Benchmarking REN Traffic Forecasting: A Large-Scale Study on Internet2
 
-**Author:** Mohammad Arafath Uddin Shariff
+**Author:** Mohammad Arafath Uddin Shariff; email: mshariff2@unl.edu
 
 This repository contains the code and Jupyter Notebooks for a project focused on **scalable and anomaly-aware forecasting of Research and Education Network (REN) traffic**. It provides an end-to-end pipeline to process large Netflow datasets, integrate anomaly detection, and benchmark various time series forecasting models.
 
