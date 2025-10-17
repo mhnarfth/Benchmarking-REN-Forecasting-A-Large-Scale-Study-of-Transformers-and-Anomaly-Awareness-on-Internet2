@@ -1,0 +1,35 @@
+----------------------
+|     Notebook_2     |
+----------------------
+
+# --- Time Series Parameters ---
+LOOKBACK          = 48                     # Sliding window length (hours)
+HORIZONS          = [1, 6, 12, 24]         # Prediction horizons
+TEST_SIZE_HOURS   = 7 * 24                 # 7 days for testing
+VAL_SIZE_HOURS    = 7 * 24                 # 7 days for validation
+
+# --- Model Training Parameters ---
+BATCH_SIZE        = 256
+EPOCHS            = 200                     # Reduced epochs for quick validation as requested
+EARLY_STOP_PATIENCE = 20                # Patience for early stopping
+LEARNING_RATE     = 1e-3
+
+
+
+----------------------
+|     Notebook_3     |
+----------------------
+
+# --- Time Series Parameters ---
+LOOKBACK          = 336                     # Sliding window length (hours)
+HORIZONS          = [1, 6, 12, 24]         # Prediction horizons
+TEST_SIZE_HOURS   = 7 * 24                 # 7 days for testing
+VAL_SIZE_HOURS    = 7 * 24                 # 7 days for validation (used for early stopping)
+
+# --- Model Training Parameters ---
+BATCH_SIZE        = 128
+EPOCHS            = 200                    # Total epochs for training (subject to early stopping)
+EARLY_STOP_PATIENCE =20                   # Patience for early stopping
+LEARNING_RATE     = 1e-3
+NF_MAX_STEPS      = EPOCHS                 # NeuralForecast uses max_steps instead of epochs
+NF_VALIDATION_STEPS = 1 # Number of steps to check validation. Set to 1 for per-epoch check or longer for faster runs.
